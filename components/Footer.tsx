@@ -25,7 +25,7 @@ export default function Footer() {
                     <div>
                         <h4 className="text-bond-navy font-bold mb-6 uppercase tracking-wider text-sm">Services</h4>
                         <ul className="space-y-3">
-                            {["AI Automation", "Chatbots", "Voice AI", "Consulting"].map((item) => (
+                            {["Web Design & Development", "AI Consulting & Strategy", "WhatsApp Business Automation", "Digital Marketing", "AI Conversational Agents", "AI Automation Workflows", "Voice AI Solutions"].map((item) => (
                                 <li key={item}>
                                     <Link href="#services" className="text-slate-500 hover:text-bond-navy transition-colors text-sm font-medium">
                                         {item}
