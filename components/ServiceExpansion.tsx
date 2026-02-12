@@ -85,12 +85,14 @@ export default function ServiceExpansion({ isOpen, onClose, service, color }: Se
                                         </p>
                                     </div>
 
-                                    <button className="bg-bond-navy text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:scale-105 transition-transform shadow-xl group w-fit">
-                                        <span className="uppercase tracking-wide text-sm">Start Project</span>
-                                        <div className="bg-bond-lime w-6 h-6 rounded-full flex items-center justify-center text-bond-navy">
-                                            <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
-                                        </div>
-                                    </button>
+                                    <a href="https://api.leadconnectorhq.com/widget/booking/ueskMJ9Ug4gjlImoO5RB" target="_blank" rel="noopener noreferrer">
+                                        <button className="bg-bond-navy text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:scale-105 transition-transform shadow-xl group w-fit">
+                                            <span className="uppercase tracking-wide text-sm">Start Project</span>
+                                            <div className="bg-bond-lime w-6 h-6 rounded-full flex items-center justify-center text-bond-navy">
+                                                <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                                            </div>
+                                        </button>
+                                    </a>
                                 </div>
 
                                 {/* Background Pattern / Branding */}

@@ -241,7 +241,7 @@ export default function ServiceGrid() {
 
                                         {/* Footer / Action */}
                                         <div className="mt-auto flex justify-end pb-8">
-                                            <div className="group/btn relative inline-block cursor-pointer">
+                                            <a href="https://api.leadconnectorhq.com/widget/booking/ueskMJ9Ug4gjlImoO5RB" target="_blank" rel="noopener noreferrer" className="group/btn relative inline-block cursor-pointer">
                                                 {isConsulting && (
                                                     <div className="absolute inset-0 bg-bond-navy rounded-full transform translate-y-1 translate-x-1 transition-transform group-hover/btn:translate-y-2 group-hover/btn:translate-x-2"></div>
                                                 )}
@@ -251,7 +251,7 @@ export default function ServiceGrid() {
                                                 )}>
                                                     View <ArrowRight className="w-4 h-4" />
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

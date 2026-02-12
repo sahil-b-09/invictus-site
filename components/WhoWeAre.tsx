@@ -104,8 +104,12 @@ export default function WhoWeAre() {
 
                         {/* Right: The "Evidence" / Visual */}
                         <div className="relative">
-                            {/* "Polaroid" / Attached Photo style */}
-                            <div className="bg-white p-4 pb-16 rounded shadow-xl transform rotate-2 border border-slate-200 relative">
+                            {/* "Polaroid" / Attached Photo style — gentle float */}
+                            <motion.div
+                                animate={{ y: [0, -8, 0], rotate: [2, 1.5, 2] }}
+                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                                className="bg-white p-4 pb-16 rounded shadow-xl transform border border-slate-200 relative"
+                            >
                                 {/* Paperclip */}
                                 <div className="absolute -top-4 right-1/2 translate-x-1/2 text-slate-400 z-20">
                                     <Paperclip className="w-12 h-12 rotate-[-5deg]" />
@@ -122,20 +126,50 @@ export default function WhoWeAre() {
                                                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                                                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
                                             </div>
-                                            <div className="font-mono text-xs sm:text-sm text-green-400 mb-2">$ invictus init system_wait</div>
-                                            <div className="font-mono text-xs sm:text-sm text-slate-300 mb-2">&gt; Analyzing workflows... <span className="text-green-400">Done</span></div>
-                                            <div className="font-mono text-xs sm:text-sm text-slate-300 mb-2">&gt; Optimizing core... <span className="text-bond-lime">100%</span></div>
+                                            <motion.div
+                                                initial={{ opacity: 0, x: -10 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                viewport={{ once: true }}
+                                                transition={{ delay: 0.3, duration: 0.5 }}
+                                                className="font-mono text-xs sm:text-sm text-green-400 mb-2"
+                                            >$ invictus init system_wait</motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0, x: -10 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                viewport={{ once: true }}
+                                                transition={{ delay: 0.7, duration: 0.5 }}
+                                                className="font-mono text-xs sm:text-sm text-slate-300 mb-2"
+                                            >&gt; Analyzing workflows... <span className="text-green-400">Done</span></motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0, x: -10 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                viewport={{ once: true }}
+                                                transition={{ delay: 1.1, duration: 0.5 }}
+                                                className="font-mono text-xs sm:text-sm text-slate-300 mb-2"
+                                            >&gt; Optimizing core... <span className="text-bond-lime">100%</span></motion.div>
                                         </div>
 
                                         <div className="grid grid-cols-2 gap-3">
-                                            <div className="bg-white/10 backdrop-blur-md p-3 rounded-lg border border-white/10">
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                                viewport={{ once: true }}
+                                                transition={{ delay: 1.4, duration: 0.4, type: "spring" }}
+                                                className="bg-white/10 backdrop-blur-md p-3 rounded-lg border border-white/10"
+                                            >
                                                 <div className="text-2xl font-bold text-bond-lime mb-1">99.9%</div>
                                                 <div className="text-[10px] text-slate-300 uppercase tracking-wider">Uptime</div>
-                                            </div>
-                                            <div className="bg-white/10 backdrop-blur-md p-3 rounded-lg border border-white/10">
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                                viewport={{ once: true }}
+                                                transition={{ delay: 1.6, duration: 0.4, type: "spring" }}
+                                                className="bg-white/10 backdrop-blur-md p-3 rounded-lg border border-white/10"
+                                            >
                                                 <div className="text-2xl font-bold text-bond-cyan mb-1">&lt;50ms</div>
                                                 <div className="text-[10px] text-slate-300 uppercase tracking-wider">Latency</div>
-                                            </div>
+                                            </motion.div>
                                         </div>
                                     </div>
                                 </div>
@@ -145,7 +179,7 @@ export default function WhoWeAre() {
                                         System Architecture v2.0
                                     </span>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
 
                     </div>

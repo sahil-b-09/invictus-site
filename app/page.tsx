@@ -50,7 +50,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 items-start">
-              <a href="#contact">
+              <a href="https://api.leadconnectorhq.com/widget/booking/ueskMJ9Ug4gjlImoO5RB" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="shadow-xl shadow-bond-navy/20 flex items-center gap-3 group">
                   Book a Strategy Call
                   <div className="bg-bond-lime text-bond-navy rounded-full p-1 group-hover:rotate-45 transition-transform">

@@ -175,7 +175,7 @@ export default function ProcessTimeline() {
                     transition={{ delay: 0.8, duration: 0.5 }}
                     className="flex justify-center mt-16"
                 >
-                    <a href="#contact">
+                    <a href="https://api.leadconnectorhq.com/widget/booking/ueskMJ9Ug4gjlImoO5RB" target="_blank" rel="noopener noreferrer">
                         <motion.button
                             whileHover={{ scale: 1.05, rotate: -1 }}
                             whileTap={{ scale: 0.97 }}

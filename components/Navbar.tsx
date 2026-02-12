@@ -54,7 +54,7 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <a href="#contact">
+                    <a href="https://api.leadconnectorhq.com/widget/booking/ueskMJ9Ug4gjlImoO5RB" target="_blank" rel="noopener noreferrer">
                         <Button variant="lime" size="sm">
                             Book Strategy
                         </Button>
@@ -83,7 +83,7 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
-                    <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                    <a href="https://api.leadconnectorhq.com/widget/booking/ueskMJ9Ug4gjlImoO5RB" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
                         <Button variant="lime" className="w-full">Book Strategy</Button>
                     </a>
                 </div>
