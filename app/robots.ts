@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = "https://invictusai.in"; // ← Update this to your actual domain
+    const baseUrl = "https://invictus-ai.in";
 
     return {
         rules: [

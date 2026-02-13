@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const handwriting = Nothing_You_Could_Do({ weight: "400", subsets: ["latin"], variable: "--font-handwriting" });
 
 // ← Update this to your actual domain
-const SITE_URL = "https://invictusai.in";
+const SITE_URL = "https://invictus-ai.in";
 
 export const metadata: Metadata = {
   // ── Core SEO ──
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
   // ── Google Search Console Verification ──
   // After setting up GSC, paste your verification code below:
   verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE", // ← Replace after GSC setup
+    google: "uu66vEG0KcB4ccL_VjdFxKZZmUnQBRPsyQv5Up7hpNQ",
     // yandex: "YOUR_YANDEX_CODE",
     // bing: "YOUR_BING_CODE",
   },
