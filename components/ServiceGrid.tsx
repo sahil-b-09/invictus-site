@@ -178,6 +178,7 @@ export default function ServiceGrid() {
                         return (
                             <motion.div
                                 key={idx}
+                                id={`service-${service.id}`}
                                 layoutId={`service-card-${service.id}`}
                                 onClick={() => setSelectedService(service)}
                                 initial={{ opacity: 0, y: 20 }}

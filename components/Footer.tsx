@@ -25,10 +25,18 @@ export default function Footer() {
                     <div>
                         <h4 className="text-bond-navy font-bold mb-6 uppercase tracking-wider text-sm">Services</h4>
                         <ul className="space-y-3">
-                            {["Web Design & Development", "AI Consulting & Strategy", "WhatsApp Business Automation", "Digital Marketing", "AI Conversational Agents", "AI Automation Workflows", "Voice AI Solutions"].map((item) => (
-                                <li key={item}>
-                                    <Link href="#services" className="text-slate-500 hover:text-bond-navy transition-colors text-sm font-medium">
-                                        {item}
+                            {[
+                                { name: "AI Consulting & Strategy", href: "#service-consulting" },
+                                { name: "Web Design & Development", href: "#service-web-dev" },
+                                { name: "AI Conversational Agents", href: "#service-agents" },
+                                { name: "Voice AI Solutions", href: "#service-voice" },
+                                { name: "WhatsApp Business Automation", href: "#service-whatsapp" },
+                                { name: "AI Automation Workflows", href: "#service-automation" },
+                                { name: "Digital Marketing", href: "#service-marketing" },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link href={item.href} className="text-slate-500 hover:text-bond-navy transition-colors text-sm font-medium">
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}
