@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
     Bot,
     Cpu,
@@ -139,6 +139,23 @@ const services = [
 
 export default function ServiceGrid() {
     const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
+
+    useEffect(() => {
+        const openFromHash = () => {
+            const hash = window.location.hash; // e.g. #service-voice
+            if (hash.startsWith('#service-')) {
+                const serviceId = hash.replace('#service-', '');
+                const match = services.find(s => s.id === serviceId);
+                if (match) {
+                    // Small delay to let the scroll finish, then open the card
+                    setTimeout(() => setSelectedService(match), 400);
+                }
+            }
+        };
+        openFromHash();
+        window.addEventListener('hashchange', openFromHash);
+        return () => window.removeEventListener('hashchange', openFromHash);
+    }, []);
 
     return (
         <section id="services" className="py-24 px-6 bg-slate-50/50 relative">
