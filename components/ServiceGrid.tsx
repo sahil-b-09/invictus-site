@@ -141,20 +141,15 @@ export default function ServiceGrid() {
     const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
 
     useEffect(() => {
-        const openFromHash = () => {
-            const hash = window.location.hash; // e.g. #service-voice
-            if (hash.startsWith('#service-')) {
-                const serviceId = hash.replace('#service-', '');
-                const match = services.find(s => s.id === serviceId);
-                if (match) {
-                    // Small delay to let the scroll finish, then open the card
-                    setTimeout(() => setSelectedService(match), 400);
-                }
+        const handleOpenService = (e: Event) => {
+            const serviceId = (e as CustomEvent).detail;
+            const match = services.find(s => s.id === serviceId);
+            if (match) {
+                setTimeout(() => setSelectedService(match), 500);
             }
         };
-        openFromHash();
-        window.addEventListener('hashchange', openFromHash);
-        return () => window.removeEventListener('hashchange', openFromHash);
+        window.addEventListener('openService', handleOpenService);
+        return () => window.removeEventListener('openService', handleOpenService);
     }, []);
 
     return (

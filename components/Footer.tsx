@@ -26,18 +26,26 @@ export default function Footer() {
                         <h4 className="text-bond-navy font-bold mb-6 uppercase tracking-wider text-sm">Services</h4>
                         <ul className="space-y-3">
                             {[
-                                { name: "AI Consulting & Strategy", href: "#service-consulting" },
-                                { name: "Web Design & Development", href: "#service-web-dev" },
-                                { name: "AI Conversational Agents", href: "#service-agents" },
-                                { name: "Voice AI Solutions", href: "#service-voice" },
-                                { name: "WhatsApp Business Automation", href: "#service-whatsapp" },
-                                { name: "AI Automation Workflows", href: "#service-automation" },
-                                { name: "Digital Marketing", href: "#service-marketing" },
+                                { name: "AI Consulting & Strategy", id: "consulting" },
+                                { name: "Web Design & Development", id: "web-dev" },
+                                { name: "AI Conversational Agents", id: "agents" },
+                                { name: "Voice AI Solutions", id: "voice" },
+                                { name: "WhatsApp Business Automation", id: "whatsapp" },
+                                { name: "AI Automation Workflows", id: "automation" },
+                                { name: "Digital Marketing", id: "marketing" },
                             ].map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.href} className="text-slate-500 hover:text-bond-navy transition-colors text-sm font-medium">
+                                    <button
+                                        onClick={() => {
+                                            const el = document.getElementById(`service-${item.id}`);
+                                            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                            // Dispatch custom event to tell ServiceGrid to open this card
+                                            window.dispatchEvent(new CustomEvent('openService', { detail: item.id }));
+                                        }}
+                                        className="text-slate-500 hover:text-bond-navy transition-colors text-sm font-medium text-left"
+                                    >
                                         {item.name}
-                                    </Link>
+                                    </button>
                                 </li>
                             ))}
                         </ul>
